@@ -9,6 +9,9 @@
 	<LocaleResource Name="Account.AccountActivation.Activated">
 		<Value>اکانت شما فعال شده است</Value>
 	</LocaleResource>
+	<LocaleResource Name="Account.AccountActivation.InvalidEmailOrToken">
+		<Value>ایمیل یا توکن معتبر نیست.لطفاً مجدد ثبت نام نمایید.</Value>
+	</LocaleResource>
 	<LocaleResource Name="Account.Administration">
 		<Value>مدیر</Value>
 	</LocaleResource>
@@ -407,6 +410,9 @@
 	</LocaleResource>
 	<LocaleResource Name="Account.Login.Fields.UserName">
 		<Value>نام کاربری</Value>
+	</LocaleResource>
+	<LocaleResource Name="Account.Login.Fields.UsernameOrEmail">
+		<Value>نام کاربری یا ایمیل</Value>
 	</LocaleResource>
 	<LocaleResource Name="Account.Login.ForgotPassword">
 		<Value>رمز خود را فراموش کرده اید؟</Value>
@@ -1254,11 +1260,26 @@
 	<LocaleResource Name="Admin.Catalog.Attributes.ProductAttributes.Fields.Description.Hint">
 		<Value>شرح ویژگی محصول</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Catalog.Attributes.ProductAttributes.Fields.ExportMappings">
+		<Value>Mappings to export fields</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Catalog.Attributes.ProductAttributes.Fields.ExportMappings.Hint">
+		<Value>Allows to map attribute values to export fields. Each entry has to be entered in a new line.</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Catalog.Attributes.ProductAttributes.Fields.ExportMappings.Note">
+		<Value>Define mappings of attribute values to export fields according to the pattern &lt;b&gt;&amp;lt;Format prefix&amp;gt;:&amp;lt;Export field name&amp;gt;&lt;/b&gt;. Example: &lt;b&gt;gmc:color&lt;/b&gt; exports the attribute values for colors to the field &lt;b&gt;color&lt;/b&gt; during the Google Merchant Center Export. The mappings are only effective when exporting attribute combinations.</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Attributes.ProductAttributes.Fields.FacetTemplateHint">
 		<Value>Search filter UI type</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Attributes.ProductAttributes.Fields.FacetTemplateHint.Hint">
 		<Value>Specifies the search filter UI type. This setting is only effective by using the 'MegaSearchPlus' plugin. Changes will take effect after next update of the search index.</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Catalog.Attributes.ProductAttributes.Fields.IndexOptionNames">
+		<Value>Index option names</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Catalog.Attributes.ProductAttributes.Fields.IndexOptionNames.Hint">
+		<Value>Specifies whether option names should be included in the search index so that products can be found by them. This setting is only effective by using the 'MegaSearchPlus' plugin. Changes will take effect after next update of the search index.</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Attributes.ProductAttributes.Fields.Name">
 		<Value>نام</Value>
@@ -1285,7 +1306,7 @@
 		<Value>برگشت به فهرست مشخصات ویژگی</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Attributes.SpecificationAttributes.Bundled">
-		<Value>Allow filtering</Value>
+		<Value>مجاز کردن فیلتر</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Attributes.SpecificationAttributes.Bundled.AllowFiltering">
 		<Value>مجاز کردن فیلتر</Value>
@@ -1312,13 +1333,13 @@
 		<Value>نشان دادن سفارش</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Attributes.SpecificationAttributes.Fields.Alias">
-		<Value>Alias</Value>
+		<Value>نام مستعار</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Attributes.SpecificationAttributes.Fields.Alias.Hint">
 		<Value>Seo-compliant URL alias for search filters (optional).</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Attributes.SpecificationAttributes.Fields.AllowFiltering">
-		<Value>Allow filtering</Value>
+		<Value>مجاز کردن فیلتر</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Attributes.SpecificationAttributes.Fields.AllowFiltering.Hint">
 		<Value>Specifies whether search results can be filtered by this attribute. This setting is only effective by using the 'MegaSearchPlus' plugin. Changes will take effect after next update of the search index.</Value>
@@ -1341,6 +1362,12 @@
 	<LocaleResource Name="Admin.Catalog.Attributes.SpecificationAttributes.Fields.FacetTemplateHint.Hint">
 		<Value>Specifies the presentation of search filters. This setting is only effective by using the 'MegaSearchPlus' plugin. Changes will take effect after next update of the search index.</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Catalog.Attributes.SpecificationAttributes.Fields.IndexOptionNames">
+		<Value>Index option names</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Catalog.Attributes.SpecificationAttributes.Fields.IndexOptionNames.Hint">
+		<Value>Specifies whether option names should be included in the search index so that products can be found by them. This setting is only effective by using the 'MegaSearchPlus' plugin. Changes will take effect after next update of the search index.</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Attributes.SpecificationAttributes.Fields.Name">
 		<Value>نام</Value>
 	</LocaleResource>
@@ -1360,7 +1387,7 @@
 		<Value>اطلاعات ویژگی</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Attributes.SpecificationAttributes.Options">
-		<Value>گز��نه ها</Value>
+		<Value>گزینه ها</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Attributes.SpecificationAttributes.Options.AddNew">
 		<Value>افزودن گزینه جدید</Value>
@@ -1566,6 +1593,9 @@
 	<LocaleResource Name="Admin.Catalog.Categories.Fields.Description.Hint">
 		<Value>توضیحات دسته</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Catalog.Categories.Fields.DisplayOrder.Hint">
+		<Value>Set the category's display order. 1 represents the top of the list.</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Categories.Fields.DisplayOrder">
 		<Value>ترتیب نمایش</Value>
 	</LocaleResource>
@@ -1624,7 +1654,7 @@
 		<Value>دسته پدر را برای این دسته انتخاب کنید، در صورتی که خالی بگذارید به عنوان دسته سطح روت در نظر گرفته خواهد شد</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Categories.Fields.ParentCategory">
-		<Value>Parent category</Value>
+		<Value>دسته بندی پدر</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Categories.Fields.Picture">
 		<Value>تصویر</Value>
@@ -2410,6 +2440,12 @@
 	<LocaleResource Name="Admin.Catalog.Products.Fields.HasDiscountsApplied">
 		<Value>Has discounts applied</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Catalog.Products.Fields.HasPreviewPicture">
+		<Value>Exclude first image from gallery</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Catalog.Products.Fields.HasPreviewPicture.Hint">
+		<Value>Activate this option if the first image should be displayed as a preview in product lists but not in the product detail gallery.</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Products.Fields.HasSampleDownload">
 		<Value>دارای فایل نمونه</Value>
 	</LocaleResource>
@@ -2568,6 +2604,9 @@
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Products.Fields.Name.Required">
 		<Value>لطفا نام را وارد کنید</Value>
+	</LocaleResource>
+		<LocaleResource Name="Admin.Catalog.Products.Fields.NewVersionDownloadId.Hint">
+		<Value>Upload a new version of the download file here.</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.Products.Fields.NotApprovedRatingSum">
 		<Value>Not approved rating sum</Value>
@@ -3235,6 +3274,15 @@
 	<LocaleResource Name="Admin.Catalog.ProductTags.Fields.Name.Hint">
 		<Value>نام برچسب محصول</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Catalog.ProductTags.Fields.ProductCount">
+		<Value>محصولات برچسب خورده</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.CatalogSettings.CompareProducts">
+		<Value>مقایسه محصولات</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.CatalogSettings.Homepage">
+		<Value>صفحه اصلی</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Catalog.ProductTags.Fields.Name.Required">
 		<Value>لطفا نام را وارد کنید</Value>
 	</LocaleResource>
@@ -3242,19 +3290,19 @@
 		<Value>محصولات برچسب خورده</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.CheckUpdate">
-		<Value>Check for update</Value>
+		<Value>بررسی برای به روزرسانی</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.CheckUpdate.AutoUpdateFailure">
-		<Value>Unknown error during package download. Please try again later.</Value>
+		<Value>خطای ناشناخته هنگام دانلود بسته. لطفا بعدا دوباره امتحان کنید.</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.CheckUpdate.AutoUpdatePossible">
-		<Value>AutoUpdate possible</Value>
+		<Value>به روز رسانی خودکار در دسترس  است</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.CheckUpdate.AutoUpdatePossibleInfo">
 		<Value>&lt;p&gt;This update can be installed automatically. For this SmartStore.NET downloads an installation package to your webserver, executes it and restarts the application. Before the installation your shop directory is backed up, except the folders &lt;i&gt;App_Data&lt;/i&gt; and &lt;i&gt;Media&lt;/i&gt;, as well as the SQL Server database file. &lt;/p&gt;&lt;p&gt;Click the &lt;b&gt;Update now&lt;/b&gt; button to download and install the package. As an alternative to this, you can download the package to your local PC further below and perform the installation at a later time manually.&lt;/p&gt;</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.CheckUpdate.CurrentVersion">
-		<Value>Current version</Value>
+		<Value>ورژن جاری برنامه</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.CheckUpdate.DontNotifyAnymore">
 		<Value>Don't notify anymore</Value>
@@ -3269,7 +3317,7 @@
 		<Value>Update available</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.CheckUpdate.UpdateNow">
-		<Value>Update now</Value>
+		<Value>به روز رسانی</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.CheckUpdate.YourVersion">
 		<Value>Your version</Value>
@@ -3279,6 +3327,18 @@
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.About">
 		<Value>About</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.Acl.AvailableFor">
+		<Value>Customer roles</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.Acl.AvailableFor.Hint">
+		<Value>Select customer roles who can access the entity. For all inactive roles, this record is hidden.</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.Acl.SubjectTo">
+		<Value>Restrict access</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.Acl.SubjectTo.Hint">
+		<Value>Determines whether this entity is subject to access restrictions (no = no restriction, yes = accessible only for selected customer groups)</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.Actions">
 		<Value>Actions</Value>
@@ -3301,6 +3361,15 @@
 	<LocaleResource Name="Admin.Common.All">
 		<Value>همه</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Common.AskCreateMutuallyAssociations">
+		<Value>Do you want to create all mutual associations?</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.AskToProceed">
+		<Value>Would you like to proceed?</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.BackToConfiguration">
+		<Value>Back to configuration</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Common.AreYouSure">
 		<Value>آیا مطمئن هستید؟</Value>
 	</LocaleResource>
@@ -3309,6 +3378,9 @@
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.AskToProceed">
 		<Value>Would you like to proceed?</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.Clear">
+		<Value>Clear</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.BackToList">
 		<Value>Back to list</Value>
@@ -3369,6 +3441,12 @@
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.Deactivate">
 		<Value>Deactivate</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.DefaultPageSizeOptions">
+		<Value>Page size options</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.DefaultPageSizeOptions.Hint">
+		<Value>Comma-separated page size options that a customer can select in lists.</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.Delete">
 		<Value>حذف</Value>
@@ -3481,6 +3559,9 @@
 	<LocaleResource Name="Admin.Common.FoldersDeleted">
 		<Value>{0} folders were deleted</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Common.Footer">
+		<Value>Footer</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Common.FtpStatus">
 		<Value>FTP status {0} ({1}).</Value>
 	</LocaleResource>
@@ -3502,6 +3583,9 @@
 	<LocaleResource Name="Admin.Common.GenericAttributes.NameAlreadyExists">
 		<Value>An attribute with the name "{0}" already exists</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Common.Global">
+		<Value>Global</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Common.Go">
 		<Value>برو</Value>
 	</LocaleResource>
@@ -3513,6 +3597,9 @@
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.Ignore">
 		<Value>Ignore</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.ImportAll">
+		<Value>Import all</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.ImportFile">
 		<Value>Import file</Value>
@@ -3559,6 +3646,9 @@
 	<LocaleResource Name="Admin.Common.ImportFromExcelProgress">
 		<Value>Please wait while the import is being executed</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Common.ImportSelected">
+		<Value>Import selected</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Common.Info">
 		<Value>مشخصات</Value>
 	</LocaleResource>
@@ -3580,8 +3670,14 @@
 	<LocaleResource Name="Admin.Common.MoveNow">
 		<Value>Move now</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Common.Navigation">
+		<Value>Navigation</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Common.NewRecords">
 		<Value>New records</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.News">
+		<Value>News</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.No">
 		<Value>خیر</Value>
@@ -3595,6 +3691,9 @@
 	<LocaleResource Name="Admin.Common.Of">
 		<Value>از</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Common.PDF">
+		<Value>PDF</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Common.Placeholder">
 		<Value>Placeholder</Value>
 	</LocaleResource>
@@ -3603,6 +3702,9 @@
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.Preview">
 		<Value>پیش نمایش</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.ProcessingInfo">
+		<Value>{0}: {1} of {2} processed</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.ProviderNotLoaded">
 		<Value>Cannot load the provider {0}.</Value>
@@ -3709,6 +3811,9 @@
 	<LocaleResource Name="Admin.Common.Treeview">
 		<Value>نمایش درختی</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Common.UnknownError">
+		<Value>An unknown error has occurred.</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Common.Unlicensed">
 		<Value>Unlicensed</Value>
 	</LocaleResource>
@@ -3723,6 +3828,12 @@
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.UploadFile">
 		<Value>لطفا یک فایل بارگذاری کنید</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.UploadFileFailed">
+		<Value>The upload has failed.</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Common.UploadFileSucceeded">
+		<Value>The file has been successfully uploaded.</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Common.View">
 		<Value>مشاهده</Value>
@@ -4000,6 +4111,12 @@
 	<LocaleResource Name="Admin.Configuration.Countries.Fields">
 		<Value>Allows billing</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Countries.Fields.AddressFormat">
+		<Value>Address format</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Countries.Fields.AddressFormat.Hint">
+		<Value>The address format according to the countries mailing address format rules.</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Configuration.Countries.Fields.AllowsBilling">
 		<Value>مجوز صدور صورتحساب</Value>
 	</LocaleResource>
@@ -4258,6 +4375,36 @@
 	<LocaleResource Name="Admin.Configuration.Currencies.Fields.Rate.Hint">
 		<Value>نرخ ارز دربرابر نرخ ارز اولیه</Value>
 	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Currencies.Fields.RoundNumDecimals">
+		<Value>Number of decimal digits</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Currencies.Fields.RoundNumDecimals.Hint">
+		<Value>Specifies the number of decimal digits to round to (Default: 2)</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Currencies.Fields.RoundOrderItemsEnabled">
+		<Value>Round all order item amounts</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Currencies.Fields.RoundOrderItemsEnabled.Hint">
+		<Value>Specifies whether to round all order item amounts (products, fees, tax etc.)</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Currencies.Fields.RoundOrderItemsEnabled.Validation">
+		<Value>The number of decimal digits must be between 0 and 8.</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Currencies.Fields.RoundOrderTotalDenominator">
+		<Value>Round to</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Currencies.Fields.RoundOrderTotalDenominator.Hint">
+		<Value>Specifies the nearest multiple of the smallest chosen amount to round the order total to. 0.05 for example will round 9.43 up to 9.45.</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Currencies.Fields.RoundOrderTotalEnabled">
+		<Value>Round order total amount</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Currencies.Fields.RoundOrderTotalEnabled.Hint">
+		<Value>Specifies whether to round the order total amount.</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Currencies.Fields.RoundOrderTotalRule">
+		<Value>Rounding rule</Value>
+	</LocaleResource>
 	<LocaleResource Name="Admin.Configuration.Currencies.Fields.Rate.Range">
 		<Value>نرخ ارز باید بزرگتر از 0</Value>
 	</LocaleResource>
@@ -4269,6 +4416,12 @@
 	</LocaleResource>
 	<LocaleResource Name="Admin.Configuration.Currencies.Localization">
 		<Value>بومی سازی</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Currencies.NoPaymentMethodsEnabledRounding">
+		<Value>Regardless of the currency configuration, the order totals are only rounded if it has been enabled for the selected payment method. Click &lt;a href='{0}'&gt;Edit&lt;/a&gt; for the desired payment methods and activate the rounding option.</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Currencies.PaymentMethodsEnabledRoundingList">
+		<Value>Payment methods for which order total rounding is enabled</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Configuration.Currencies.Select">
 		<Value>انتخاب واحد</Value>
@@ -4461,6 +4614,12 @@
 	</LocaleResource>
 	<LocaleResource Name="Admin.Configuration.Languages.AddNew">
 		<Value>افزودن زبان</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Languages.AvailableLanguages">
+		<Value>Available Languages</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Languages.AvailableLanguages.Note">
+		<Value>Click &lt;b class="font-weight-medium"&gt;Download&lt;/b&gt; to install a new language including all localized resources. On &lt;a class="font-weight-medium" href="https://translate.smartstore.com/" target="_blank"&gt;translate.smartstore.com&lt;/a&gt; you will find more details about available resources.</Value>
 	</LocaleResource>
 	<LocaleResource Name="Admin.Configuration.Languages.BackToList">
 		<Value>برگشت به فهرست زبان</Value>
@@ -14303,7 +14462,7 @@
 		<Value>نام شما</Value>
 	</LocaleResource>
 	<LocaleResource Name="ContactUs.PrivacyAgreement">
-		<Value>رضایت حریم شخصی</Value>
+		<Value>رعایت حریم شخصی</Value>
 	</LocaleResource>
 	<LocaleResource Name="ContactUs.PrivacyAgreement.DetailText">
 		<Value>Yes I've read the &lt;a href="{0}"&gt;privacy terms&lt;/a&gt; and agree that my data given by me can be stored electronically. My data will thereby only be used to process my inquiry.</Value>
@@ -14316,6 +14475,12 @@
 	</LocaleResource>
 	<LocaleResource Name="Content.CopyrightNotice">
 		<Value>حق چاپ محفوظ است</Value>
+	</LocaleResource>
+	<LocaleResource Name="CookieConsent.BadgeText">
+		<Value>{0} برای تجربه بهتر در استفاده سرویس های خود از کوکی استفاده میکند . &lt;a href='{1}'&gt;شرایط استفاده&lt;/a&gt;</Value>
+	</LocaleResource>
+	<LocaleResource Name="CookieConsent.Button">
+		<Value>باشه، فهمیدم!</Value>
 	</LocaleResource>
 	<LocaleResource Name="Currencies">
 		<Value>ارز</Value>
